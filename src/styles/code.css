@@ -1,0 +1,111 @@
+/* CodeExplain Workspace Styles — IDE Side-by-Side Interface */
+.code-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  height: calc(100vh - 120px);
+  min-height: 580px;
+}
+
+@media (max-width: 992px) {
+  .code-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+.editor-panel {
+  background: #0D1117;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: #161B22;
+  border-bottom: 1px solid #30363D;
+}
+
+.language-select {
+  background: #21262D;
+  color: #C9D1D9;
+  border: 1px solid #30363D;
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.action-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 12px;
+  background: #161B22;
+  border-bottom: 1px solid #30363D;
+}
+
+.code-textarea {
+  flex: 1;
+  width: 100%;
+  background: #0D1117;
+  color: #E6EDF3;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  padding: 16px;
+  border: none;
+  resize: none;
+  outline: none;
+  line-height: 1.6;
+}
+
+.analysis-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.analysis-section {
+  background: var(--bg-card-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+}
+
+.analysis-section-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent-green);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.code-block-preview {
+  background: #0D1117;
+  border: 1px solid #30363D;
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  overflow-x: auto;
+  color: #7EE787;
+  margin-top: 6px;
+}
